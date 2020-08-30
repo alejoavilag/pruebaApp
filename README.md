@@ -6,6 +6,11 @@ fullstack developer
 ```
 npm install
 ```
+# Compilación
+
+```
+npm run build
+```
 # Ejecución
 
 ```
