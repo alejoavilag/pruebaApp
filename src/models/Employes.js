@@ -23,7 +23,5 @@ const Employes = sequelize.define('employes', {
     timestamps: false
 })
 
-//Project.hasMany(Task,{ foreingKey: 'projectid', sourceKey: 'id' })
-//Task.belongsTo(Project,{ foreingKey: 'projectid', sourceKey: 'id' })
 
 export default Employes

@@ -1,4 +1,5 @@
 import express, { json } from  'express'
+
 import morgan from 'morgan'
 
 import employesRoutes from './routes/employes'
@@ -10,6 +11,5 @@ app.use(morgan('dev'))
 app.use(json())
 
 app.use('/api/employes',employesRoutes)
-
 
 export default app

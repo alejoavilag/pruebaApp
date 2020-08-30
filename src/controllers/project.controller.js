@@ -1,4 +1,4 @@
-import Employes from '../models/Employes'
+import Employe from '../models/Employes'
 
 export async function createEmploye(req, res) {
     const { id, fullname, cargo, isboss, idjefe} = req.body
