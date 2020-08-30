@@ -3,7 +3,7 @@ import Employe from '../models/Employes'
 export async function createEmploye(req, res) {
     const { id, fullname, cargo, isboss, idjefe} = req.body
     try{
-        let newEmploye = await Emoploye.create({
+        let newEmploye = await Employe.create({
             id,
             fullname,
             cargo,

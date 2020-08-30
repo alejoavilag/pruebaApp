@@ -6,7 +6,7 @@ export const sequelize = new Sequelize(
     'admin',
     {
         host: 'localhost',
-        port: 5431,
+        port: 5433,
         dialect: 'postgres',
         pool:{
             max: 5,

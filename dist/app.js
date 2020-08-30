@@ -11,9 +11,7 @@ var _express = _interopRequireWildcard(require("express"));
 
 var _morgan = _interopRequireDefault(require("morgan"));
 
-var _projects = _interopRequireDefault(require("./routes/projects"));
-
-var _tasks = _interopRequireDefault(require("./routes/tasks"));
+var _employes = _interopRequireDefault(require("./routes/employes"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -24,7 +22,6 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 var app = (0, _express["default"])();
 app.use((0, _morgan["default"])('dev'));
 app.use((0, _express.json)());
-app.use('/api/projects', _projects["default"]);
-app.use('/api/tasks', _tasks["default"]);
+app.use('/api/employes', _employes["default"]);
 var _default = app;
 exports["default"] = _default;
