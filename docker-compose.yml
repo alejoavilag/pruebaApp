@@ -1,0 +1,27 @@
+version: "3.7"
+services:
+    postgres:        
+        image: postgres:11.5
+        restart: always
+        environment: 
+            POSTGRES_PASSWORD: admin
+    
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 4000:4000
+
+version: "2"
+    services:
+        node:
+            image: "node:12.18"
+            user: "node"
+            working_dir: /home/node/app
+            environment:
+                - NODE_ENV=production
+            volumes:
+                - ./:/home/node/app
+            expose:
+                - "8081"
+            command: "npm start"
