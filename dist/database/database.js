@@ -11,7 +11,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 var sequelize = new _sequelize["default"]('postgres', 'postgres', 'admin', {
   host: 'localhost',
-  port: 5431,
+  port: 5432,
   dialect: 'postgres',
   pool: {
     max: 5,

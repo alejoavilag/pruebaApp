@@ -1,9 +1,10 @@
-import Employe from '../models/Employes'
+import { Employes } from '../models/Employes'
+
 
 export async function createEmploye(req, res) {
     const { id, fullname, cargo, isboss, idjefe} = req.body
     try{
-        let newEmploye = await Employe.create({
+        let newEmploye = await Employes.create({
             id,
             fullname,
             cargo,
@@ -30,7 +31,7 @@ export async function createEmploye(req, res) {
 
 export async function getEmployes(req, res) {
     try{
-        const employes = await Employe.findAll()
+        const employes = await Employes.findAll()
         res.json({
             data: employes
         })
@@ -42,7 +43,7 @@ export async function getEmployes(req, res) {
 export async function getOneEmploye(req, res) {
     try{
         const { id } = req.params
-        const employe = await Employe.findOne({
+        const employe = await Employes.findOne({
             where: {
                 id
             }
@@ -58,7 +59,7 @@ export async function getOneEmploye(req, res) {
 export async function deleteEmploye(req, res){
     try{
         const { id } = req.params
-        const deleteRowCount = await Employe.destroy({
+        const deleteRowCount = await Employes.destroy({
             where: {
                 id
             }
@@ -77,7 +78,7 @@ export async function updateEmploye(req, res){
     try{
         const { id } = req.params
         const { fullname, cargo, isboss, idjefe} = req.body
-        const employes = await Employe.findAll({
+        const employes = await Employes.findAll({
             attributes: [ 'id', 'fullname', 'cargo', 'isboss', 'idjefe'],
             where: {
                 id

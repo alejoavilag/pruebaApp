@@ -2,7 +2,7 @@ import Sequelize from 'sequelize'
 import { sequelize } from '../database/database'
 
 
-const Employes = sequelize.define('employes', {
+export const Employes = sequelize.define('employes', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true
@@ -24,4 +24,4 @@ const Employes = sequelize.define('employes', {
 })
 
 
-export default Employes
+//export default Employes
